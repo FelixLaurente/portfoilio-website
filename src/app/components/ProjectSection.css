@@ -1,0 +1,99 @@
+ /* CARD */
+
+  .card:hover{
+    transform: scale(1.1, 1.1);
+  }
+  .card1:hover >:not(:hover){
+    filter:blur(20px);
+    transform: scale(0.9, 0.9);
+  }
+/* ALL , WEB, MOBILE */
+.all {
+    gap: 6px;
+}
+
+/* TALENT */
+.navlinks {
+    position: relative;
+    cursor: pointer;
+    color: #efefee;
+    font-size: 20px;
+    padding: 0.5rem, 1rem;
+    transition: color 0.25s;
+
+}
+
+.navlinks::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+
+}
+
+.navlinks:hover {
+    color: black;
+
+}
+.navlinks:hover::after {
+    scale: 1 1;
+}
+/* PICTURE */
+.comp {
+  filter : drop-shadow(0px 0px 12px blue)
+}
+.comp:hover .stars {
+  display: block;
+  filter:drop-shadow(0 0 10px #fffdef)
+}
+
+.comp:hover{
+  transform: scale(1.1, 1.1);
+}
+.comp:hover > .card:not(:hover){
+  filter:brightness(10px);
+  transform: scale(0.9, 0.9);
+}
+
+/* ABOUT */
+
+.about::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 3px;
+    background-color: blue;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.about:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.about {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+
+
+  
+  
+  
+  
+
+

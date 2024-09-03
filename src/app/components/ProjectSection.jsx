@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import ProjectCard from "./ProjectCard";
 import ProjectTag from './ProjectTag';
+import './ProjectSection.css';
 
 
 
@@ -34,7 +35,7 @@ const projectsData = [
       gitUrl: "/",
       previewUrl: "/",
     },
-    {
+   {
       id: 4,
       title: "Food Ordering Application",
       description: "Project 4 description",
@@ -44,6 +45,7 @@ const projectsData = [
       previewUrl: "/",
     },
     {
+
       id: 5,
       title: "React Firebase Template",
       description: "Authentication and CRUD operations",
@@ -68,28 +70,36 @@ const ProjectSection = () => {
   return (
     <>
     <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">My Project</h2>
-    <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-     
+    <div className=" all text-white flex flex-row justify-center items-center py-6" >
+
+     <div className="one">
      <ProjectTag 
       onClick={handleTagChange} 
       name="All" 
       isSelected={tag === "All"}
       />
+      </div>
+
+      <div className="two">
       <ProjectTag 
       onClick={handleTagChange} 
       name="Web" 
       isSelected={tag === "Web"}
       />
+      </div>
+      
+      <div className="three">
       <ProjectTag 
       onClick={handleTagChange} 
       name="Mobile" 
       isSelected={tag === "Mobile"}
       />
+      </div>
     
     </div>
     <div className="grid md:grid-cols-3 gap-8 md:grid-12">
       {filteredProject.map ((project) => (
-     <ProjectCard 
+     <ProjectCard
      key={project.id} 
      title={project.title}
      description={project.description} 

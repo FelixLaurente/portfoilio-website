@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProjectSection.css'
 
 
 const EmailSection = () => {
@@ -81,7 +82,7 @@ const EmailSection = () => {
                 </div>
                 <button
                     type="submit"
-                    className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">Send Me</button>
+                    className="send bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full">Send Me</button>
             </form>
         </div>
     </section>

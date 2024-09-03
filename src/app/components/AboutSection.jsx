@@ -4,6 +4,7 @@ import React, {useTransition, useState} from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
 import { Roboto } from 'next/font/google';
+import './ProjectSection.css'
 
 const roboto = Roboto ({
     weight: ['100', '100'],
@@ -83,31 +84,39 @@ const AboutSection = () => {
   return (
     <section className="text-white">
     <div className="md:grid md:grid-cols-2 gap-8 item-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.jpg" width={500} height={500}/>
+        <Image className="comp" alt="description of image" src="/images/about-image.jpg" width={500} height={500}/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-        <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+            <div className="about">
+            <h2 className=" text-4xl font-bold text-white mb-4">About Me</h2>
+            </div>
         <p className="text-base lg:text-lg">I am a front-end developer with passion for creating interactive and responsive web applications. I have basic knowledge with JavaScript, React, NodeJs, Express
             MySql, HTML, CSS and GIT. I am quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others
             to create amazing projects.
         </p>
-        <div className="flex flex-row mt-8">
+        <div className=" flex flex-row mt-8">
+            <div className="skill">
             <TabButton 
             selectTab={() => handleTabChange("skills")} 
             active={tab === "skills"}> 
             {""}Skills{""}
             </TabButton>
+            </div>
 
+            <div className="educ">
             <TabButton 
             selectTab={() => handleTabChange("education")} 
             active={tab === "education"}> 
             {""}Education{""}
             </TabButton>
+            </div> 
 
+            <div className="cert">
             <TabButton 
             selectTab={() => handleTabChange("certification")} 
             active={tab === "certification"}> 
             {""}Certification{""}
             </TabButton>
+            </div>
         </div>
         <div className="mt-8">{TAB_DATA.find((w) => w.id === tab).content}</div>
         </div>

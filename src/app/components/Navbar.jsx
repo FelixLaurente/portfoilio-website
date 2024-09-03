@@ -6,15 +6,18 @@ import NavLink from './NavLink';
 import MenuOverlay from './MenuOverlay';
 
  const navLinks = [
-    {
+    {   
+       
         title: "About",
         path: "#about",
     },
     {
+    
         title: "Project",
         path: "#project",
     },
     {
+        
         title: "Contact",
         path: "#contact",
     },
